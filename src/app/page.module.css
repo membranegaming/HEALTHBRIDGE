@@ -1,0 +1,677 @@
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: float 15s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-5%, 5%) rotate(10deg);
+    }
+}
+
+.heroNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    position: relative;
+    z-index: 10;
+}
+
+.heroLogo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: white;
+    text-decoration: none;
+}
+
+.logoIcon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroLogo span {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.heroNavLinks {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.heroNavLinks a {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.heroNavLinks a:hover {
+    color: white;
+}
+
+.heroContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 4rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+}
+
+.heroBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    color: white;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.gradientText {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.heroSubtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 500px;
+}
+
+.heroActions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.heroStats {
+    display: flex;
+    gap: 3rem;
+}
+
+.heroStat {
+    text-align: center;
+}
+
+.heroStatValue {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+}
+
+.heroStatLabel {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.heroVisual {
+    position: relative;
+}
+
+.dashboardPreview {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.previewHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+}
+
+.previewDots {
+    display: flex;
+    gap: 0.375rem;
+}
+
+.previewDots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.previewDots span:nth-child(1) {
+    background: #ef4444;
+}
+
+.previewDots span:nth-child(2) {
+    background: #fbbf24;
+}
+
+.previewDots span:nth-child(3) {
+    background: #22c55e;
+}
+
+.previewHeader>span:last-child {
+    margin-left: auto;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.previewContent {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 1rem;
+}
+
+.previewSidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.previewNavItem {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.previewNavItem.active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.previewMain {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.previewCard {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    height: 40px;
+}
+
+.previewCardsRow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.previewCard.small {
+    height: 30px;
+}
+
+.previewTable {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    height: 60px;
+}
+
+/* Features Section */
+.featuresSection {
+    padding: 6rem 5%;
+    background: var(--bg-primary);
+}
+
+.sectionHeader {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 4rem;
+}
+
+.sectionTag {
+    display: inline-block;
+    background: var(--primary-100);
+    color: var(--primary-700);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.375rem 1rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.sectionHeader h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.sectionHeader p {
+    color: var(--text-muted);
+    font-size: 1.125rem;
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featureCard {
+    background: var(--bg-secondary);
+    border: 1px solid var(--gray-200);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s;
+}
+
+.featureCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-200);
+}
+
+.featureIcon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.featureIcon.primary {
+    background: var(--primary-100);
+    color: var(--primary-600);
+}
+
+.featureIcon.secondary {
+    background: var(--secondary-100);
+    color: var(--secondary-600);
+}
+
+.featureIcon.accent {
+    background: rgba(139, 92, 246, 0.1);
+    color: #8b5cf6;
+}
+
+.featureIcon.success {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+}
+
+.featureIcon.warning {
+    background: rgba(234, 179, 8, 0.1);
+    color: #ca8a04;
+}
+
+.featureIcon.pink {
+    background: rgba(236, 72, 153, 0.1);
+    color: #ec4899;
+}
+
+.featureCard h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.featureCard p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.featureList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.featureList li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    padding: 0.375rem 0;
+}
+
+.featureList li::before {
+    content: '✓';
+    color: var(--success);
+    font-weight: bold;
+}
+
+/* Portals Section */
+.portalsSection {
+    padding: 6rem 5%;
+    background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-tertiary) 100%);
+}
+
+.portalsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portalCard {
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.portalCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.portalCard.patient:hover {
+    border-color: var(--primary-400);
+}
+
+.portalCard.doctor:hover {
+    border-color: var(--secondary-400);
+}
+
+.portalCard.admin:hover {
+    border-color: #8b5cf6;
+}
+
+.portalIcon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: white;
+}
+
+.portalCard.patient .portalIcon {
+    background: var(--gradient-primary);
+}
+
+.portalCard.doctor .portalIcon {
+    background: var(--gradient-secondary);
+}
+
+.portalCard.admin .portalIcon {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.portalCard h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.portalCard p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.portalFeatures {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    text-align: left;
+}
+
+.portalFeatures li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+}
+
+/* Extra Features */
+.extraFeatures {
+    padding: 6rem 5%;
+    background: var(--bg-primary);
+}
+
+.extraGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.extraCard {
+    background: var(--bg-secondary);
+    border: 1px solid var(--gray-200);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.extraCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.extraCard h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem 0 0.5rem;
+}
+
+.extraCard p {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+}
+
+/* CTA Section */
+.ctaSection {
+    padding: 6rem 5%;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+}
+
+.ctaContent {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 4rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+}
+
+.ctaContent h2 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.ctaContent p {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 2rem;
+}
+
+.ctaActions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Footer */
+.footer {
+    background: var(--gray-900);
+    color: white;
+    padding: 4rem 5% 2rem;
+}
+
+.footerContent {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footerBrand p {
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+.footerColumn h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.footerColumn a {
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 0.375rem 0;
+    transition: color 0.2s;
+}
+
+.footerColumn a:hover {
+    color: white;
+}
+
+.footerBottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 3rem;
+    padding-top: 2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .heroContent {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 2rem 5%;
+    }
+
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+
+    .heroSubtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .heroActions {
+        justify-content: center;
+    }
+
+    .heroStats {
+        justify-content: center;
+    }
+
+    .heroVisual {
+        display: none;
+    }
+
+    .featuresGrid,
+    .portalsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .extraGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footerContent {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroNavLinks {
+        display: none;
+    }
+
+    .heroTitle {
+        font-size: 2rem;
+    }
+
+    .heroStats {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .sectionHeader h2 {
+        font-size: 1.75rem;
+    }
+
+    .extraGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .ctaContent {
+        padding: 2rem;
+    }
+
+    .ctaActions {
+        flex-direction: column;
+    }
+
+    .footerContent {
+        grid-template-columns: 1fr;
+    }
+}
