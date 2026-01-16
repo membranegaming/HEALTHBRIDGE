@@ -22,10 +22,10 @@
   </p>
 
   <p align="center">
-    <img src="https://img.shields.io/github/license/yourusername/healthbridge?style=flat-square" alt="License"/>
-    <img src="https://img.shields.io/github/stars/yourusername/healthbridge?style=flat-square" alt="Stars"/>
-    <img src="https://img.shields.io/github/forks/yourusername/healthbridge?style=flat-square" alt="Forks"/>
-    <img src="https://img.shields.io/github/issues/yourusername/healthbridge?style=flat-square" alt="Issues"/>
+    <img src="https://github.com/membranegaming/HEALTHBRIDGE" alt="License"/>
+    <img src="https://github.com/membranegaming/HEALTHBRIDGE" alt="Stars"/>
+    <img src="https://github.com/membranegaming/HEALTHBRIDGE" alt="Forks"/>
+    <img src="https://github.com/membranegaming/HEALTHBRIDGE" alt="Issues"/>
   </p>
 
 </div>
