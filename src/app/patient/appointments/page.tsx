@@ -1,20 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import {
   Calendar,
   Clock,
   Plus,
-  Filter,
-  Search,
   Video,
-  MapPin,
   X,
   CheckCircle,
   AlertCircle,
-  User,
 } from "lucide-react";
 import styles from "../../dashboard.module.css";
 
@@ -87,7 +83,7 @@ const appointments = [
   },
 ];
 
-export default function AppointmentsPage() {
+function AppointmentsContent() {
   const searchParams = useSearchParams();
   const booked = searchParams.get('booked');
 
@@ -339,5 +335,13 @@ export default function AppointmentsPage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function AppointmentsPage() {
+  return (
+    <Suspense fallback={<div className={styles.dashboard}><p>Loading...</p></div>}>
+      <AppointmentsContent />
+    </Suspense>
   );
 }
