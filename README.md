@@ -35,7 +35,7 @@
 ## 🌟 Overview
 
 HealthBridge is a comprehensive **Hospital Management System** designed to digitize and streamline healthcare operations. It provides dedicated portals for patients, doctors, administrators, and front-desk staff — all wrapped in a beautiful, modern UI with glassmorphism design.
-<a href="https://healthbridge.page">healthbridge.page</a>
+<strong>Hosted Website: </strong><a href="https://healthbridge.page">healthbridge.page</a>
 
 > 💡 **Why HealthBridge?** Traditional hospital systems are fragmented and outdated. HealthBridge unifies all stakeholders on a single platform with role-based access, real-time updates, and intuitive workflows.
 
